@@ -1,0 +1,27 @@
+<header class="header">
+    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+        <div class="hamburger menu_mm"><i class="fa fa-bars menu_mm" aria-hidden="true"></i></div>
+        <div class="header_logo">
+            <a href="/">
+                <div>my<span>Protein</span></div>
+            </a>
+        </div>
+        <nav class="header_nav">
+            <ul class="d-flex flex-row align-items-center justify-content-start">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/categories">Каталог</a></li>
+                <li><a href="/calorie">Подсчёт калорий</a></li>
+                <li><a href="/workout">Контроль физической активности</a></li>
+            </ul>
+        </nav>
+        <div class="header_extra ml-auto d-flex flex-row align-items-center justify-content-start">
+            <div class="top-right-btn-wrapper">
+                {{#if auth}}
+                    {{> buttons_auth}}
+                {{else}}
+                    {{> buttons_not_auth}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</header>

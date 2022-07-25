@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyProtein - {{product.name}}</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.3/bootstrap.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/product.css">
+    <link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
+    <link href="/plugins/toast/toast.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="super_container">
+    {{> header}}
+    {{> menu}}
+    {{> sidebar}}
+    <div class="home">
+        <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/product_background.jpg" data-speed="0.8"></div>
+        <div class="home_container">
+            <div class="home_content">
+                <div class="home_title">{{product.name}}</div>
+                <div class="breadcrumbs">
+                    <ul class="d-flex flex-row align-items-center justify-content-start">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/categories">Категории</a></li>
+                        <li><a href="/catalog{{product.categoryId}}">{{catName}}</a></li>
+                        <li>{{product.name}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product">
+        <div class="section_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="product_content_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
+                            <div class="product_content order-lg-1 order-2">
+                                <div class="product_content_inner">
+                                    <div class="product_image_row">
+                                        <div class="product_image_3 product_image"><img src="images/products/{{product.img}}" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_sidebar order-lg-2 order-1">
+                                    <div class="product_name">{{product.name}}</div>
+                                    <div class="product_price">{{product.price}}руб.</div>
+                                    <button class="cart_button add-to-cart-btn trans_200" data-prodId="{{product.id}}">В корзину</button>
+                                <div class="product_links">
+                                    {{product.description}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</div>
+<script type="module" src="/js/add_to_cart.js"></script>
+<script src="/plugins/toast/toast.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+</body>
+</html>

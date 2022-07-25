@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>MyProtein - авторизация</title>
+    <link rel="stylesheet" type="text/css" href="/styles/bootstrap-4.1.3/bootstrap.css">
+    <link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles/responsive.css">
+    <link href="/plugins/toast/toast.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="super_container">
+
+    {{> header}}
+    {{> menu}}
+    {{> sidebar}}
+    <div class="result-container">
+    </div>
+    <div class="container auth-form-container">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <h2>Авторизация</h2>
+            </div>
+            <div class="col-lg-5">
+                <div class="login_form_container">
+                    <form id="login_form" class="login_form">
+                        <div class="form-group">
+                            <label for="email">Введите e-mail</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Введите пароль</label>
+                            <input type="password" name="password" class="form-control" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container auth-form-container">
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <h2>Регистрация</h2>
+            </div>
+            <div class="col-lg-5 ">
+                <div class="registration_form_container">
+                    <form id="registration_form" class="registration_form">
+                        <div class="form-group">
+                            <label for="email">Введите e-mail</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Введите пароль</label>
+                            <input type="password" name="password" class="form-control" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</div>
+<script type="module" src="/js/auth.js"></script>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/plugins/toast/toast.min.js"></script>
+<script src="/js/menu.js"></script>
+</body>
+</html>

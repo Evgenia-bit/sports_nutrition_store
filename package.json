@@ -1,0 +1,26 @@
+{
+  "name": "MyProtein",
+  "version": "1.0.0",
+  "description": "Online store of sports nutrition products with built-in modules for monitoring physical activity and a calorie counter.",
+  "main": "index.js",
+  "scripts": {
+    "prefill": "node ./db/prefill.js",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Mochalina Evgenia",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.1",
+    "sequelize": "^6.7.0",
+    "uuid": "^8.3.2"
+  }
+}

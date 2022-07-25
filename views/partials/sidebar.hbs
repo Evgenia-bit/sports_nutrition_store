@@ -1,0 +1,27 @@
+<div class="sidebar">
+    <div class="info">
+        <div class="info_content d-flex flex-row align-items-center justify-content-start">
+
+        </div>
+    </div>
+    <div class="sidebar_logo">
+        <a href="/">
+            <div>my<span>Protein</span></div>
+        </a>
+    </div>
+    <nav class="sidebar_nav">
+        <ul>
+            <li><a href="/">Главная<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            <li><a href="/categories">Каталог<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            <li><a href="/calorie">Подсчёт калорий<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            <li><a href="/workout">Контроль физической активности<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+        </ul>
+    </nav>
+    <div class="top-right-btn-wrapper">
+        {{#if auth}}
+            {{> buttons_auth}}
+        {{else}}
+            {{> buttons_not_auth}}
+        {{/if}}
+    </div>
+</div>

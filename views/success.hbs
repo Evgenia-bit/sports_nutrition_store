@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyProtein - заказ успешно оформлен</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.3/bootstrap.css">
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/cart.css">
+    <link rel="stylesheet" type="text/css" href="styles/cart_responsive.css">
+</head>
+<body>
+<div class="super_container">
+    {{> header}}
+    {{> menu}}
+    {{> sidebar}}
+    <div class="cart_section">
+        <div class="section_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="cart_container text-center">
+                            <h2 class="success-title">Ваш заказ № {{num}} успешно создан</h2>
+                            <p  class="success-text">Спасибо за покупку!</p>
+                            <div class="success-btn button button_continue trans_200"><a href="/">Вернуться на главную</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>
